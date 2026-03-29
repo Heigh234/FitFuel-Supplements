@@ -86,7 +86,7 @@ export default function CartDrawer() {
               <p className="font-display text-2xl tracking-widest text-[#111111]">
                 TU CARRITO ESTÁ VACÍO
               </p>
-              <p className="font-sans text-sm text-gray-400 leading-relaxed">
+              <p className="font-sans text-sm text-gray-500 leading-relaxed">
                 Agrega productos para comenzar
               </p>
             </div>
