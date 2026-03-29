@@ -159,7 +159,7 @@ export default function TestimonialsCarousel() {
                 <article className="bg-card border border-border rounded-xl p-6 flex flex-col gap-4 h-full">
 
                   {/* Stars */}
-                  <div className="flex items-center gap-0.5" aria-label={`${t.rating} de 5 estrellas`}>
+                  <div className="flex items-center gap-0.5" aria-label={`${t.rating} de 5 estrellas`} role="img">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
@@ -211,19 +211,23 @@ export default function TestimonialsCarousel() {
         </div>
 
         {/* Dot navigation */}
-        <div className="flex items-center justify-center gap-2 mt-8">
+        <div className="flex items-center justify-center gap-1 mt-8">
           {scrollSnaps.map((_, i) => (
             <button
               key={i}
               onClick={() => scrollTo(i)}
               aria-label={`Ir a reseña ${i + 1}`}
-              className={cn(
-                "h-2 rounded-full transition-all duration-300",
-                selectedIndex === i
-                  ? "w-6 bg-brand-orange"
-                  : "w-2 bg-border hover:bg-brand-orange/50"
-              )}
-            />
+              className="w-11 h-11 flex items-center justify-center group"
+            >
+              <div
+                className={cn(
+                  "h-2 rounded-full transition-all duration-300",
+                  selectedIndex === i
+                    ? "w-6 bg-brand-orange"
+                    : "w-2 bg-border group-hover:bg-brand-orange/50"
+                )}
+              />
+            </button>
           ))}
         </div>
 
