@@ -5,7 +5,7 @@ import { REVIEWS_BY_SLUG } from "@/lib/data/reviews";
 
 function StarRating({ rating, size = 16 }: { rating: number; size?: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${rating} de 5 estrellas`}>
+    <div className="flex items-center gap-0.5" aria-label={`${rating} de 5 estrellas`} role="img">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
@@ -116,7 +116,7 @@ export default function ProductReviews({ slug }: ProductReviewsProps) {
                         {review.name}
                       </span>
                       {review.verified && (
-                        <span className="font-sans text-[10px] font-bold tracking-wide uppercase text-green-600 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">
+                        <span className="font-sans text-[10px] font-bold tracking-wide uppercase text-green-800 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">
                           Compra verificada
                         </span>
                       )}
