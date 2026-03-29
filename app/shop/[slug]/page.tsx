@@ -61,17 +61,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto">
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 font-sans text-xs text-muted-foreground"
+            className="flex flex-wrap items-center font-sans text-xs text-gray-600"
           >
-            <Link href="/" className="hover:text-brand-orange transition-colors">
+            <Link href="/" className="hover:text-brand-orange transition-colors min-w-[44px] min-h-[44px] inline-flex items-center justify-center pr-2 py-2">
               Home
             </Link>
-            <span>/</span>
-            <Link href="/shop" className="hover:text-brand-orange transition-colors">
+            <span aria-hidden="true" className="px-1 text-muted-foreground">/</span>
+            <Link href="/shop" className="hover:text-brand-orange transition-colors min-w-[44px] min-h-[44px] inline-flex items-center justify-center px-2 py-2">
               Shop
             </Link>
-            <span>/</span>
-            <span className="text-foreground font-medium">{product.name}</span>
+            <span aria-hidden="true" className="px-1 text-muted-foreground">/</span>
+            <span className="text-foreground font-medium px-2 py-2 inline-flex items-center min-h-[44px]">{product.name}</span>
           </nav>
         </div>
       </div>
